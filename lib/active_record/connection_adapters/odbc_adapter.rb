@@ -94,6 +94,7 @@ module ActiveRecord
       def initialize(connection, logger, config, database_metadata)
         configure_time_options(connection)
         super(connection, logger, config)
+        @connection = connection
         @database_metadata = database_metadata
       end
 

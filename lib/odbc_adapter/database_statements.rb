@@ -31,6 +31,7 @@ module ODBCAdapter
         ActiveRecord::Result.new(column_names, values)
       end
     end
+    alias internal_exec_query exec_query
 
     # Executes delete +sql+ statement in the context of this connection using
     # +binds+ as the bind substitutes. +name+ is logged along with
